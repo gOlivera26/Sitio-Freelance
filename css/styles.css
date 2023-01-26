@@ -29,4 +29,31 @@ siempre utilizar*/
 .titulo span{
     font-size: 2rem;
 }
+.contenedor{
+    width: 120rem;/*1200px*/
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+
+    margin:0 auto; /*0 auto;lo mismo que arriba*/
+}
+.nav-background{
+    background-color: var(--secundario);
+    
+}
+.navegacion-principal{
+    padding: 1rem;
+    display: flex; /*nos da acceso a nuevas propiedades*/
+    justify-content:space-between;
+    /*permite mover el contenido horizontal/verticalmente*/
+    
+}
+.navegacion-principal a{
+    color:var(--blanco);
+    text-decoration: none;
+    
+}
+
+
 
