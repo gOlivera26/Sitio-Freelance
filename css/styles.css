@@ -1,16 +1,32 @@
+/*pseudoelemetno(elemento que no existe en el codigo html sin 
+embargo root es una forma de almacenar variables de css
+que se las conocen como custom propertyes*/
+:root{
+    /*VARIABLES DE CSS*/
+    --blanco: #FFFFFF;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris:#757575;
+
+}
+
 html{
     font-size: 62.5%;
 }
 body{
     font-size: 16px;/*1 rem=10px*/
+    font-family:'Krub', sans-serif;
 }
 /*REM se adapta mejor a diferentes tamaños, eldocigo de arriba
 siempre utilizar*/
-h1{
+.titulo{
     text-align: center;
     font-size: 3.8rem;
-   
+
+    
 }
-span{
+.titulo span{
     font-size: 2rem;
 }
+
