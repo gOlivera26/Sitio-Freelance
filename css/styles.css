@@ -8,24 +8,38 @@ que se las conocen como custom propertyes*/
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris:#757575;
+    --grisClaro:#DFE9F3;
 
 }
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body{
     font-size: 16px;/*1 rem=10px*/
     font-family:'Krub', sans-serif;
+    background-image: linear-gradient(to top,var(--grisClaro) 0%,var(--blanco)100% );
 }
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
 /*REM se adapta mejor a diferentes tamaños, eldocigo de arriba
 siempre utilizar*/
-.titulo{
-    text-align: center;
-    font-size: 3.8rem;
-
-    
-}
 .titulo span{
     font-size: 2rem;
 }
@@ -72,5 +86,54 @@ siempre utilizar*/
     color:var(--oscuro);
 
 }
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0,0,0,.6);/*definimos la transparencia*/
+    background-color: rbg(0 0 0 / 70%); 
+    width: 100%;
+    height: 100%;
+    /*posicionamos la sombra con la posicion relativa primero en .hero
+    y luego en .contenido-hero usamos la posicion absoluta*/
+
+    /*alinea verticalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
 
 
+
+}
+.ubicacion{
+    display: flex; 
+    align-items: flex-end; /*alinea verticalmente hacia abajo*/
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
