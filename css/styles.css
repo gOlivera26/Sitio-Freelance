@@ -43,16 +43,24 @@ siempre utilizar*/
     
 }
 .navegacion-principal{
-    padding: 1rem;
-    display: flex; /*nos da acceso a nuevas propiedades*/
+    
+    display: flex; /*nos da acceso a nuevas propiedades(habilita flexbox)*/
     justify-content:space-between;
-    /*permite mover el contenido horizontal/verticalmente*/
+    /*permite mover/trabajar el contenido horizontal/verticalmente*/
     
 }
 .navegacion-principal a{
     color:var(--blanco);
     text-decoration: none;
-    
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem; /*agrega espacio de afuera hacia adentro*/
+}
+/*pseudoclase que se dispara cuando ponemos el puntero arriba de la nav*/
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+
 }
 
 
