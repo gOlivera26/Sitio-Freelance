@@ -25,6 +25,7 @@ body{
     font-family:'Krub', sans-serif;
     background-image: linear-gradient(to top,var(--grisClaro) 0%,var(--blanco)100% );
 }
+/*tipografia*/
 h1{
     font-size: 3.8rem;
 }
@@ -55,6 +56,12 @@ siempre utilizar*/
 .nav-background{
     background-color: var(--secundario);
     
+}
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
 }
 .navegacion-principal{
     
@@ -92,6 +99,7 @@ siempre utilizar*/
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 .contenido-hero{
     position: absolute;
