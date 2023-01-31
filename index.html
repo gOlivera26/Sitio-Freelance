@@ -107,32 +107,34 @@
 
             </section>
         </div>
-</main>
 
     <section>
         <h2>Contacto</h2>
-            <form>
+            <form class="formulario">
                <fieldset>
                 
-                    <legend>Contactame!</legend>
+                    <legend>Contactame llenando todos los campos</legend>
                     <!--legend para dar indicaciones a usuarios en un formulario-->
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Tu Nombre">
-                    </div>
-                    <div>
-                        <label>Telefono</label>
-                        <input type="tel"placeholder="Tu telefono">
-                    </div>
-                    <div>
-                        <label>Correo</label>
-                        <input type="email"placeholder="Tu Email">
-                    </div>
-                    <div>
-                        <label>Mensaje</label>
-                        <textarea></textarea>
-                    <div>
-                        <input type="submit" value="Enviar">
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text" placeholder="Tu Nombre">
+                        </div>
+                        <div class="campo">
+                            <label>Telefono</label>
+                            <input class="input-text" type="tel"placeholder="Tu telefono">
+                        </div>
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-text" type="email"placeholder="Tu Email">
+                        </div>
+                        <div class="campo">
+                            <label></label>
+                            <textarea class="input-text"></textarea>
+                        </div>
+                    </div> <!--cierre contenedor-campos-->
+                    <div class="alinear-derecha flex">
+                        <input class="boton w-sm100" type="submit" value="Enviar">
                     </div>
                </fieldset> 
 
@@ -140,7 +142,9 @@
 
     </section>
 
-    <footer>
+</main>
+
+    <footer class="footer">
          <p>Todos los derechos reservados. Gustavo Olivera Freelancer</p>
     </footer>
     

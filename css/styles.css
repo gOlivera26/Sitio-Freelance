@@ -53,10 +53,9 @@ siempre utilizar*/
 
     margin:0 auto; /*0 auto;lo mismo que arriba*/
 }
-.nav-background{
-    background-color: var(--secundario);
-    
-}
+
+/**Navegacion principal**/
+
 .sombra{
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
     background-color: var(--blanco);
@@ -72,12 +71,7 @@ siempre utilizar*/
     /*permite mover/trabajar el contenido horizontal/verticalmente*/
     
 }
-@media (min-width: 768px){
-    .navegacion-principal{
-        flex-direction: row
-        
-    }
-}
+
 .navegacion-principal a{
     display: block;
     text-align: center;
@@ -124,6 +118,8 @@ siempre utilizar*/
     display: flex; 
     align-items: flex-end; /*alinea verticalmente hacia abajo*/
 }
+
+/**Boton**/
 .boton{
     background-color: var(--secundario);
     color: var(--blanco);
@@ -136,14 +132,18 @@ siempre utilizar*/
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
 }
+.boton:hover{
+    cursor: pointer;
+}
+
+/**Media Query**/
 @media (min-width: 768px) {
     .boton{
         width: auto;
     }
 }
-
-
 @media (min-width: 768px){
     /**Servicios**/
     .servicios{
@@ -152,6 +152,16 @@ siempre utilizar*/
         column-gap: 1rem;/**agrega margen de separacion en los parrafos**/
     }
 }
+
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row
+        
+    }
+}
+
+/**Servicios**/
 .servicio{
     display:flex;
     flex-direction: column;
@@ -174,4 +184,89 @@ siempre utilizar*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;/**alinea verticalmente**/
+}
+/**Contacto**/
+.formulario{
+    background-color: var(--gris);
+    width: min( 60rem , 100% );/**utiliza el valor mas pequeño**/
+    margin: 0 auto;/**centra horizontalmente el form**/
+    padding: 2rem;
+    border-radius: 1rem;
+    
+}
+
+.formulario fieldset{
+    border: none;
+    
+}
+.formulario legend{
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;/**separa "titulo" del primer input**/
+    color: var(--primario);
+}
+@media (min-width:768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;/**define la area de las columnas**/
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;/**separacion de columnas**/
+    }
+         
+}
+/**nth-child("posicion del campo a seleccionar") sirve por si tengo 4 clases "campo"llamadas igual, selecciona la que le pasemos por parametro como si fuera un arreglo**/
+
+.campo:nth-child(4), 
+.campo:nth-child(3){
+    grid-column: 1/3; /**posiciona un elemento**/
+}
+
+.campo{
+    margin-bottom: 1rem;
+
+}
+.campo label{
+    color:var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+.enviar .boton{
+
+}
+.campo textarea{
+    height: 20rem;
+}
+
+/**Utilidades**/
+.nav-background{
+    background-color: var(--secundario);    
+}
+.w-sm100{
+    width: 100%;
+}
+.alinear-derecha{
+    justify-content: flex-end;
+}
+.flex{
+    display: flex;
+}
+@media (min-width:768px){
+    .w-sm100{
+        width: auto;
+    }
+}
+
+/**Footer**/
+.footer{
+    text-align: center;
 }
