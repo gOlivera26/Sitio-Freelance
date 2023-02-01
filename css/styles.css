@@ -14,10 +14,17 @@ que se las conocen como custom propertyes*/
 
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /**Hack para box model**/
+    scroll-snap-type: y mandatory; /**Scroll**/
 }
-*, *:before, *:after {
+*, *:before, *:after {    
     box-sizing: inherit;
+}
+/**Scroll Snap**/
+.servicios, .navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop:always ;
 }
 
 body{
@@ -145,7 +152,7 @@ siempre utilizar*/
     }
 }
 @media (min-width: 768px){
-    /**Servicios**/
+    
     .servicios{
         display: grid; /**agrega las propiedades de css gris**/
         grid-template-columns: 1fr 1fr 1fr; /**dividimos en columnas las secciones**/
@@ -162,6 +169,7 @@ siempre utilizar*/
 }
 
 /**Servicios**/
+
 .servicio{
     display:flex;
     flex-direction: column;
